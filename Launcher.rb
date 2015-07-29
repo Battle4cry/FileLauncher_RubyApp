@@ -34,20 +34,5 @@ launcher = Launcher.new
     Usage: #{__FILE__} target_file
   " 
   end
-  
-  if ARGV.empty?
-    help
-    exit
-  else
-    app_map = {
-       'html' => 'firefox',
-       'rb' => 'gvim',
-       'jpg' => 'gimp'
-    }
-  
-    l = Launcher.new app_map 
-    target = ARGV.join ' ' 
-    l.run target 
-  end
 
 end
